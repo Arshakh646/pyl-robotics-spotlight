@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-navy text-primary-foreground/80">
+  return <footer className="bg-navy text-primary-foreground/80">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
@@ -20,19 +18,26 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-primary-foreground mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              {[
-                { label: "About Us", to: "/about" },
-                { label: "Products", to: "/products" },
-                { label: "Services", to: "/services" },
-                { label: "Why PYL", to: "/why-pyl" },
-                { label: "Industries", to: "/industries" },
-              ].map((link) => (
-                <li key={link.to}>
+              {[{
+              label: "About Us",
+              to: "/about"
+            }, {
+              label: "Products",
+              to: "/products"
+            }, {
+              label: "Services",
+              to: "/services"
+            }, {
+              label: "Why PYL",
+              to: "/why-pyl"
+            }, {
+              label: "Industries",
+              to: "/industries"
+            }].map(link => <li key={link.to}>
                   <Link to={link.to} className="hover:text-accent transition-colors">
                     {link.label}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -70,7 +75,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} className="text-accent" />
-                <span>+1 (555) 123-4567</span>
+                <span>+971502894613
+              </span>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="text-accent mt-0.5" />
@@ -84,8 +90,6 @@ const Footer = () => {
           © {new Date().getFullYear()} PYL Robotics. All rights reserved.
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
