@@ -4,12 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Zap, Bot, Wrench, Sun, Droplets, Users, ArrowRight, Shield, TrendingUp } from "lucide-react";
 
-const stats = [
-  { value: "500K+", label: "Panels Cleaned", icon: Sun },
-  { value: "40%", label: "Water Saved", icon: Droplets },
-  { value: "200+", label: "Clients Served", icon: Users },
-  { value: "99.5%", label: "Uptime", icon: TrendingUp },
-];
 
 const products = [
   {
@@ -62,21 +56,6 @@ const Index = () => {
                 </Button>
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="bg-navy-light border-y border-border/10">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, i) => (
-              <div key={i} className="text-center">
-                <stat.icon className="mx-auto mb-2 text-accent" size={28} />
-                <p className="font-display text-3xl font-bold text-primary-foreground">{stat.value}</p>
-                <p className="text-sm text-primary-foreground/60">{stat.label}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
