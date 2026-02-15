@@ -3,6 +3,7 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Zap, Bot, Wrench, Sun, Droplets, Users, ArrowRight, Shield, TrendingUp } from "lucide-react";
+import solarRobotImg from "@/assets/solar-robot.png";
 
 
 const products = [
@@ -112,11 +113,8 @@ const Index = () => {
                 ))}
               </div>
             </div>
-            <div className="bg-navy-light rounded-2xl aspect-video flex items-center justify-center border border-border/10">
-              <div className="text-center text-primary-foreground/30">
-                <Bot size={64} className="mx-auto mb-4" />
-                <p className="text-sm">Product Image Placeholder</p>
-              </div>
+            <div className="bg-navy-light rounded-2xl aspect-video overflow-hidden border border-border/10">
+              <img src={solarRobotImg} alt="PYL Robotics solar panel cleaning robot" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
