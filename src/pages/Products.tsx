@@ -3,6 +3,7 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Check, ArrowRight, Wrench, Bot } from "lucide-react";
 import solarBrushImg from "@/assets/solar-brush.png";
+import solarRobotProductImg from "@/assets/solar-robot-product.jpg";
 
 const brushFeatures = [
   "Lightweight and portable design",
@@ -93,11 +94,8 @@ const Products = () => {
                 </Button>
               </Link>
             </div>
-            <div className="order-1 md:order-2 bg-background rounded-2xl aspect-[4/3] flex items-center justify-center border border-border">
-              <div className="text-center text-muted-foreground/50">
-                <Bot size={64} className="mx-auto mb-4" />
-                <p className="text-sm">Product Image Placeholder</p>
-              </div>
+            <div className="order-1 md:order-2 bg-background rounded-2xl aspect-[4/3] overflow-hidden border border-border">
+              <img src={solarRobotProductImg} alt="PYL Robotics solar panel cleaning robot" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
