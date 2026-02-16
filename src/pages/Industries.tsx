@@ -3,6 +3,7 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Home, Sun, Factory, ArrowRight } from "lucide-react";
 import rooftopSolarImg from "@/assets/rooftop-solar.jpg";
+import utilitySolarImg from "@/assets/utility-solar.jpg";
 
 const industries = [
   {
@@ -17,6 +18,7 @@ const industries = [
     ],
   },
   {
+    image: utilitySolarImg,
     icon: Sun,
     title: "Utility-Scale Solar Farms",
     description: "Large solar farms need automated, scalable cleaning solutions. Our cleaning robot covers vast arrays efficiently, reducing downtime and maximizing energy output across thousands of panels.",
