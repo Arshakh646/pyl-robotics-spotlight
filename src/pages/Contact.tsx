@@ -15,7 +15,7 @@ const contactSchema = z.object({
   email: z.string().trim().email("Invalid email address").max(255),
   company: z.string().trim().max(100).optional(),
   phone: z.string().trim().max(20).optional(),
-  message: z.string().trim().min(1, "Message is required").max(2000),
+  message: z.string().trim().min(1, "Message is required").max(2000)
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -23,7 +23,7 @@ type ContactFormData = z.infer<typeof contactSchema>;
 const Contact = () => {
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
-    defaultValues: { name: "", email: "", company: "", phone: "", message: "" },
+    defaultValues: { name: "", email: "", company: "", phone: "", message: "" }
   });
 
   const onSubmit = (data: ContactFormData) => {
@@ -60,61 +60,61 @@ const Contact = () => {
                       <FormField
                         control={form.control}
                         name="name"
-                        render={({ field }) => (
-                          <FormItem>
+                        render={({ field }) =>
+                        <FormItem>
                             <FormLabel>Name *</FormLabel>
                             <FormControl><Input placeholder="Your name" {...field} /></FormControl>
                             <FormMessage />
                           </FormItem>
-                        )}
-                      />
+                        } />
+
                       <FormField
                         control={form.control}
                         name="email"
-                        render={({ field }) => (
-                          <FormItem>
+                        render={({ field }) =>
+                        <FormItem>
                             <FormLabel>Email *</FormLabel>
                             <FormControl><Input placeholder="you@example.com" {...field} /></FormControl>
                             <FormMessage />
                           </FormItem>
-                        )}
-                      />
+                        } />
+
                     </div>
                     <div className="grid md:grid-cols-2 gap-5">
                       <FormField
                         control={form.control}
                         name="company"
-                        render={({ field }) => (
-                          <FormItem>
+                        render={({ field }) =>
+                        <FormItem>
                             <FormLabel>Company</FormLabel>
                             <FormControl><Input placeholder="Company name" {...field} /></FormControl>
                             <FormMessage />
                           </FormItem>
-                        )}
-                      />
+                        } />
+
                       <FormField
                         control={form.control}
                         name="phone"
-                        render={({ field }) => (
-                          <FormItem>
+                        render={({ field }) =>
+                        <FormItem>
                             <FormLabel>Phone</FormLabel>
                             <FormControl><Input placeholder="+1 (555) 000-0000" {...field} /></FormControl>
                             <FormMessage />
                           </FormItem>
-                        )}
-                      />
+                        } />
+
                     </div>
                     <FormField
                       control={form.control}
                       name="message"
-                      render={({ field }) => (
-                        <FormItem>
+                      render={({ field }) =>
+                      <FormItem>
                           <FormLabel>Message *</FormLabel>
                           <FormControl><Textarea placeholder="Tell us about your project..." rows={5} {...field} /></FormControl>
                           <FormMessage />
                         </FormItem>
-                      )}
-                    />
+                      } />
+
                     <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
                       Send Message
                     </Button>
@@ -154,7 +154,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium text-foreground text-sm">Address</p>
-                      <p className="text-muted-foreground text-sm">Innovation Hub, Tech Park<br />Silicon Valley, CA</p>
+                      <p className="text-muted-foreground text-sm">Innovation Hub, Tech Park
+Si<br />Silicon Valley, CA</p>
                     </div>
                   </div>
                 </div>
@@ -171,8 +172,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>);
 };
 
 export default Contact;
