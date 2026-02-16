@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Check, ArrowRight, Wrench, Bot } from "lucide-react";
+import solarBrushImg from "@/assets/solar-brush.avif";
 
 const brushFeatures = [
   "Lightweight and portable design",
@@ -41,11 +42,8 @@ const Products = () => {
       <section className="section-padding bg-background" id="brush">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center">
-              <div className="text-center text-muted-foreground/50">
-                <Wrench size={64} className="mx-auto mb-4" />
-                <p className="text-sm">Product Image Placeholder</p>
-              </div>
+            <div className="bg-muted rounded-2xl aspect-[4/3] overflow-hidden">
+              <img src={solarBrushImg} alt="PYL Robotics solar cleaning brush" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-accent font-medium text-sm tracking-widest uppercase mb-2">Product 01</p>
