@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Check, ArrowRight, Wrench, Bot } from "lucide-react";
-import solarBrushImg from "@/assets/solar-brush.avif";
+import solarBrushImg from "@/assets/solar-brush.png";
 
 const brushFeatures = [
   "Lightweight and portable design",
