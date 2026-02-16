@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Home, Sun, Factory, ArrowRight } from "lucide-react";
 import rooftopSolarImg from "@/assets/rooftop-solar.jpg";
 import utilitySolarImg from "@/assets/utility-solar.jpg";
+import industrialSolarImg from "@/assets/industrial-solar.png";
 
 const industries = [
   {
@@ -29,6 +30,7 @@ const industries = [
     ],
   },
   {
+    image: industrialSolarImg,
     icon: Factory,
     title: "Industrial Facilities",
     description: "Factories, warehouses, and industrial complexes with solar installations benefit from our durable, heavy-duty cleaning systems designed for harsh industrial environments.",
