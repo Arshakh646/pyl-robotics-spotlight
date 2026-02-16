@@ -2,9 +2,11 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Home, Sun, Factory, ArrowRight } from "lucide-react";
+import rooftopSolarImg from "@/assets/rooftop-solar.jpg";
 
 const industries = [
   {
+    image: rooftopSolarImg,
     icon: Home,
     title: "Rooftop Solar",
     description: "Residential and commercial rooftop installations require regular cleaning for optimal performance. Our cleaning brush and compact robot are designed for easy operation on rooftops of all sizes.",
@@ -58,11 +60,15 @@ const Industries = () => {
           {industries.map((ind, i) => (
             <div key={i} className={`grid md:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
               <div className={i % 2 === 1 ? "md:order-2" : ""}>
-                <div className="bg-muted rounded-2xl aspect-video flex items-center justify-center">
-                  <div className="text-center text-muted-foreground/50">
-                    <ind.icon size={64} className="mx-auto mb-4" />
-                    <p className="text-sm">Image Placeholder</p>
-                  </div>
+                <div className="bg-muted rounded-2xl aspect-video flex items-center justify-center overflow-hidden">
+                  {ind.image ? (
+                    <img src={ind.image} alt={ind.title} className="w-full h-full object-contain" />
+                  ) : (
+                    <div className="text-center text-muted-foreground/50">
+                      <ind.icon size={64} className="mx-auto mb-4" />
+                      <p className="text-sm">Image Placeholder</p>
+                    </div>
+                  )}
                 </div>
               </div>
               <div className={i % 2 === 1 ? "md:order-1" : ""}>
