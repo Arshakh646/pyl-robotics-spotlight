@@ -42,8 +42,8 @@ const Products = () => {
       <section className="section-padding bg-background" id="brush">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-muted rounded-2xl aspect-[4/3] overflow-hidden">
-              <img src={solarBrushImg} alt="PYL Robotics solar cleaning brush" className="w-full h-full object-cover" />
+            <div className="bg-muted rounded-2xl aspect-[4/3] overflow-hidden flex items-center justify-center">
+              <img src={solarBrushImg} alt="PYL Robotics solar cleaning brush" className="w-full h-full object-contain" />
             </div>
             <div>
               <p className="text-accent font-medium text-sm tracking-widest uppercase mb-2">Product 01</p>
