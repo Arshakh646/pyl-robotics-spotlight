@@ -6,22 +6,22 @@ import solarBrushImg from "@/assets/solar-brush.png";
 import solarRobotProductImg from "@/assets/solar-robot-product.jpg";
 
 const brushFeatures = [
-  "Lightweight and portable design",
-  "Suitable for rooftop and ground-mounted panels",
-  "Soft bristle technology – no panel damage",
-  "Manual and semi-automated options",
-  "Easy to maintain and operate",
-  "Cost-effective for small to mid-scale plants",
-];
+"Lightweight and portable design",
+"Suitable for rooftop and ground-mounted panels",
+"Soft bristle technology – no panel damage",
+"Manual and semi-automated options",
+"Easy to maintain and operate",
+"Cost-effective for small to mid-scale plants"];
+
 
 const robotFeatures = [
-  "Fully automated cleaning cycle",
-  "Water-efficient – up to 40% less water usage",
-  "AI-powered path planning",
-  "Weather-resistant and durable build",
-  "Remote monitoring and control",
-  "Scalable for utility-scale solar farms",
-];
+"Fully automated cleaning cycle",
+"Water-efficient – up to 40% less water usage",
+"AI-powered path planning",
+"Weather-resistant and durable build",
+"Remote monitoring and control",
+"Scalable for utility-scale solar farms"];
+
 
 const Products = () => {
   return (
@@ -44,7 +44,7 @@ const Products = () => {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="bg-muted rounded-2xl aspect-[4/3] overflow-hidden flex items-center justify-center">
-              <img src={solarBrushImg} alt="PYL Robotics solar cleaning brush" className="w-full h-full object-contain" />
+              <img alt="PYL Robotics solar cleaning brush" className="w-full h-full object-contain" src="/lovable-uploads/d2a4d946-857e-47be-ae06-d239fd1fc0bf.png" />
             </div>
             <div>
               <p className="text-accent font-medium text-sm tracking-widest uppercase mb-2">Product 01</p>
@@ -53,12 +53,12 @@ const Products = () => {
                 Our Solar Cleaning Brush is designed for efficient manual and semi-automated cleaning of solar panels. Built with soft-bristle technology, it ensures thorough cleaning without causing any damage to panel surfaces.
               </p>
               <ul className="space-y-3 mb-8">
-                {brushFeatures.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3">
+                {brushFeatures.map((feature, i) =>
+                <li key={i} className="flex items-start gap-3">
                     <Check className="text-accent mt-0.5 flex-shrink-0" size={18} />
                     <span className="text-foreground text-sm">{feature}</span>
                   </li>
-                ))}
+                )}
               </ul>
               <Link to="/contact">
                 <Button className="bg-accent text-accent-foreground hover:bg-accent/90">
@@ -81,12 +81,12 @@ const Products = () => {
                 Our flagship cleaning robot uses advanced automation and AI-powered path planning to deliver efficient, water-saving, and consistent cleaning across large-scale solar installations.
               </p>
               <ul className="space-y-3 mb-8">
-                {robotFeatures.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3">
+                {robotFeatures.map((feature, i) =>
+                <li key={i} className="flex items-start gap-3">
                     <Check className="text-accent mt-0.5 flex-shrink-0" size={18} />
                     <span className="text-foreground text-sm">{feature}</span>
                   </li>
-                ))}
+                )}
               </ul>
               <Link to="/contact">
                 <Button className="bg-accent text-accent-foreground hover:bg-accent/90">
@@ -95,13 +95,13 @@ const Products = () => {
               </Link>
             </div>
             <div className="order-1 md:order-2 bg-background rounded-2xl aspect-[4/3] overflow-hidden border border-border">
-              <img src={solarRobotProductImg} alt="PYL Robotics solar panel cleaning robot" className="w-full h-full object-cover" />
+              <img alt="PYL Robotics solar panel cleaning robot" className="w-full h-full object-cover" src="/lovable-uploads/e2794677-fad9-40ea-9ec7-17b0e778988a.png" />
             </div>
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>);
+
 };
 
 export default Products;
