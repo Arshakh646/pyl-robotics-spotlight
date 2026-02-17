@@ -12,7 +12,7 @@ const milestones = [
   
   { year: "2020", event: "First Solar Cleaning Brush prototype developed and tested" },
   { year: "2021", event: "Solar Cleaning Robot v1 launched for utility-scale plants" },
-  { year: "2022", event: "Expanded to custom robotics design services" },
+  
   { year: "2023", event: "Reached 200+ clients and 500K panels cleaned milestone" },
   { year: "2024", event: "Next-gen water-efficient cleaning robot released" },
 ];
