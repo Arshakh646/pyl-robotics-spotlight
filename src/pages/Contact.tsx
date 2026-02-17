@@ -145,7 +145,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium text-foreground text-sm">Phone</p>
-                      <p className="text-muted-foreground text-sm">+1 (555) 123-4567</p>
+                      <p className="text-muted-foreground text-sm">+971502894613</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -154,8 +154,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium text-foreground text-sm">Address</p>
-                      <p className="text-muted-foreground text-sm">Innovation Hub, Tech Park
-Si<br />Silicon Valley, CA</p>
+                      <p className="text-muted-foreground text-sm">Calicut & Dubai 
+                        <br />Silicon Valley, CA</p>
                     </div>
                   </div>
                 </div>
