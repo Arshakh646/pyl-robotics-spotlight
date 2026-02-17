@@ -33,7 +33,7 @@ const Footer = () => {
             }, {
               label: "Industries",
               to: "/industries"
-            }].map(link => <li key={link.to}>
+            }].map((link) => <li key={link.to}>
                   <Link to={link.to} className="hover:text-accent transition-colors">
                     {link.label}
                   </Link>
@@ -80,7 +80,9 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="text-accent mt-0.5" />
-                <span>Innovation Hub, Tech Park</span>
+                <span>Dubai 
+ & Calicut
+              </span>
               </li>
             </ul>
           </div>
@@ -90,6 +92,4 @@ const Footer = () => {
           © {new Date().getFullYear()} PYL Robotics. All rights reserved.
         </div>
       </div>
-    </footer>;
-};
-export default Footer;
+    </footer>;};export default Footer;

@@ -154,7 +154,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium text-foreground text-sm">Address</p>
-                      <p className="text-muted-foreground text-sm">Calicut & Dubai 
+                      <p className="text-muted-foreground text-sm">Dubai
+
                         <br />Silicon Valley, CA</p>
                     </div>
                   </div>
@@ -172,7 +173,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </Layout>);
-};
+    </Layout>);};
 
 export default Contact;
