@@ -9,7 +9,7 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2019", event: "PYL Robotics founded with a vision for solar cleaning innovation" },
+  
   { year: "2020", event: "First Solar Cleaning Brush prototype developed and tested" },
   { year: "2021", event: "Solar Cleaning Robot v1 launched for utility-scale plants" },
   { year: "2022", event: "Expanded to custom robotics design services" },
