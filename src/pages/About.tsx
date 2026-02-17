@@ -78,29 +78,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="section-padding bg-background">
-        <div className="container mx-auto max-w-3xl">
-          <div className="text-center mb-14">
-            <p className="text-accent font-medium text-sm tracking-widest uppercase mb-2">Our Journey</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Milestones</h2>
-          </div>
-          <div className="space-y-0">
-            {milestones.map((m, i) => (
-              <div key={i} className="flex gap-6 group">
-                <div className="flex flex-col items-center">
-                  <div className="w-4 h-4 rounded-full bg-accent border-4 border-accent/20 flex-shrink-0" />
-                  {i < milestones.length - 1 && <div className="w-0.5 h-full bg-border" />}
-                </div>
-                <div className="pb-10">
-                  <p className="font-display font-bold text-accent text-sm">{m.year}</p>
-                  <p className="text-foreground">{m.event}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 };
