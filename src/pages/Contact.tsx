@@ -26,10 +26,23 @@ const Contact = () => {
     defaultValues: { name: "", email: "", company: "", phone: "", message: "" }
   });
 
-  const onSubmit = (data: ContactFormData) => {
-    console.log("Contact form submitted:", data);
-    toast.success("Thank you! We'll get back to you soon.");
-    form.reset();
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbx0YXQOW9h2RrsgHL6GHm0XegLo21RQKkVqHxHYH3aYAL1-wtbHQ_eQi24Foo7lw4Hh/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        }
+      );
+      toast.success("Thank you! We'll get back to you soon.");
+      form.reset();
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast.error("Something went wrong. Please try again.");
+    }
   };
 
   return (
