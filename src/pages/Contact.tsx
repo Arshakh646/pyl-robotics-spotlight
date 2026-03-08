@@ -28,15 +28,37 @@ const Contact = () => {
 
   const onSubmit = async (data: ContactFormData) => {
     try {
-      await fetch(
-        "https://script.google.com/macros/s/AKfycbx0YXQOW9h2RrsgHL6GHm0XegLo21RQKkVqHxHYH3aYAL1-wtbHQ_eQi24Foo7lw4Hh/exec",
-        {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "text/plain" },
-          body: JSON.stringify(data),
-        }
-      );
+      const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx0YXQOW9h2RrsgHL6GHm0XegLo21RQKkVqHxHYH3aYAL1-wtbHQ_eQi24Foo7lw4Hh/exec";
+      
+      // Use hidden iframe + form to avoid CORS/redirect issues with Apps Script
+      const iframe = document.createElement("iframe");
+      iframe.name = "hidden_iframe";
+      iframe.style.display = "none";
+      document.body.appendChild(iframe);
+
+      const formEl = document.createElement("form");
+      formEl.method = "POST";
+      formEl.action = SCRIPT_URL;
+      formEl.target = "hidden_iframe";
+
+      const fields = { ...data, timestamp: new Date().toISOString() };
+      Object.entries(fields).forEach(([key, value]) => {
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = key;
+        input.value = String(value || "");
+        formEl.appendChild(input);
+      });
+
+      document.body.appendChild(formEl);
+      formEl.submit();
+
+      // Clean up after submission
+      setTimeout(() => {
+        document.body.removeChild(formEl);
+        document.body.removeChild(iframe);
+      }, 2000);
+
       toast.success("Thank you! We'll get back to you soon.");
       form.reset();
     } catch (error) {
